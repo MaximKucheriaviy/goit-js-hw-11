@@ -1,6 +1,6 @@
 export default function createPhotoDiv({webformatURL = "", largeImageURL = "", tags = "", likes = "", views = "", comments = "", downloads = ""} = {}){
-    const photoDiv = `<div class="photo-card">
-    <img src="${webformatURL}" alt="${tags}" loading="lazy" data-large-url="${largeImageURL}"/>
+    const photoDiv = `<div class="photo-card" data-large-url="${largeImageURL}">
+    <img src="${webformatURL}" alt="${tags}" loading="lazy"/>
     <div class="info">
     <p class="info-item">
         <b>Likes</b> ${likes}

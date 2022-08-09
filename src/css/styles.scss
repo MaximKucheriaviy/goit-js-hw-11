@@ -1,0 +1,8 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc((100% - 24% * 4) / 3);
+    & .photo-card{
+        width: 24%;
+    }
+}

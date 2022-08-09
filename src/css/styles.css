@@ -62,3 +62,7 @@ p{
 .country-params-list span{
   font-weight: 700;
 }
+
+img{
+  max-width: 100%;
+}
