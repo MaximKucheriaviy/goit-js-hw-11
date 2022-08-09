@@ -8,7 +8,7 @@ export default async function pixabayGet({q, key, imageType = "photo", orientati
     const reqUrl = `${url}?key=${key}&q=${q}&imageType=${imageType}&o&safesearch=${safesearch}&per_page=${perPage}&page=${page}`;
     try{
         const response = await axios.get(reqUrl);
-        return response.data
+        return response.data;
     }
     catch(err){
         console.log(err);

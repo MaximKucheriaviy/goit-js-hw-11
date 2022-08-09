@@ -1,12 +1,22 @@
 import './css/styles.css';
 import pixabayGet from './js/pixabayGet';
+import createPhotoDiv from './js/createPhotoDiv';
 
-const options = {
-    key: "29155901-7a6502b1ec64ba72602e491fa",
-    q: "yellow flowers"
+const refs = {
+    gallery: document.querySelector('.gallery'),
 }
 
-pixabayGet(options)
+const pixabayGetOptions = {
+    key: "29155901-7a6502b1ec64ba72602e491fa",
+    q: "yellow flowers",
+    page: 2
+}
+
+pixabayGet(pixabayGetOptions)
 .then(data => {
-    console.log(data);
+    const photos = data.hits.reduce((acc, item) =>  acc + createPhotoDiv(item), "");
+    refs.gallery.insertAdjacentHTML('beforeend', photos);
 })
+
+
+
