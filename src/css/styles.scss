@@ -48,4 +48,31 @@
     background-color: blue;
     text-align: center;
     margin-bottom: 10px;
+
+    .input-div{
+        position: relative;
+        display: inline-block;
+        & input{
+            height: 30px;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+        & button {
+            position: absolute;
+            border: none;
+            // outline: 1px solid green;
+            background-color: transparent;
+            right: 0px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        & svg{
+            width: 10px;
+            height: 10px;
+        }
+    }
 }
