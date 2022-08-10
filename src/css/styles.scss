@@ -1,8 +1,27 @@
 .gallery{
     display: flex;
     flex-wrap: wrap;
+
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     gap: calc((100% - 24% * 4) / 3);
+    row-gap: 30px;
+    & .image-thumb{
+        height: 192px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        & img{
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+    }
     & .photo-card{
-        width: 24%;
+        width: 288px;
+        border: 1px solid black;
+        border-radius: 4px;
+        
     }
 }
