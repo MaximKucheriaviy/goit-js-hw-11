@@ -31,7 +31,6 @@ refs.form.addEventListener("submit", onSubmit);
 refs.inputField.addEventListener("input", () => {
     refs.gallery.innerHTML = "";
     pixabayGetOptions.page = 1;
-    console.log("Change");
 })
 
 scrollDetector.on(() => {
@@ -58,6 +57,10 @@ function getImages(){
         gallery.refresh();
         pixabayGetOptions.page += 1;
         scrollDetector.startEmitin();
+
+    })
+    .catch(err => {
+        console.log(err);
     })
 }
 
